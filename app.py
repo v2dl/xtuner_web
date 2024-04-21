@@ -180,10 +180,10 @@ def on_btn_click():
 
 @st.cache_resource
 def load_model():
-    model = (AutoModelForCausalLM.from_pretrained('/root/ft/final_model',
+    model = (AutoModelForCausalLM.from_pretrained('https://openxlab.org.cn/models/detail/Dorus/XTuner_Model/tree/main/final_model',
                                                   trust_remote_code=True).to(
                                                       torch.bfloat16).cuda())
-    tokenizer = AutoTokenizer.from_pretrained('/root/ft/final_model',
+    tokenizer = AutoTokenizer.from_pretrained('https://openxlab.org.cn/models/detail/Dorus/XTuner_Model/tree/main/final_model',
                                               trust_remote_code=True)
     return model, tokenizer
 
